@@ -1,4 +1,9 @@
 jdk:
-  - openjdk11
+  - openjdk17
+
 before_install:
   - chmod +x gradlew
+
+# Isto garante que o JitPack use o wrapper correto
+install:
+  - ./gradlew :appinion_sdk:assembleRelease
