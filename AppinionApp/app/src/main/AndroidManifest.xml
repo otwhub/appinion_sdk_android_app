@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppinionApp">
+        <meta-data
+            android:name="pt.appinionsdk.appinion.android.CLIENTID"
+            android:value="rvt_test"
+            />
+        <meta-data
+            android:name="pt.appinionsdk.appinion.android.CLIENTSECRET"
+            android:value="f2d4d9f9-2aa2-4210-8ab7-d86765fc43c3"
+            />
+        <meta-data
+            android:name="pt.appinionsdk.appinion.android.APPID"
+            android:value="1892afcd-2e30-42c7-8979-8c2c61e83381"
+            />
+        <meta-data
+            android:name="pt.appinionsdk.appinion.android.SCOPE"
+            android:value="feedback"
+            />
+        <meta-data
+            android:name="pt.appinionsdk.appinion.android.DEBUG"
+            android:value="true"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppinionApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

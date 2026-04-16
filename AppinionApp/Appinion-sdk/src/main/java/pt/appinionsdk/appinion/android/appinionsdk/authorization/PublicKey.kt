@@ -1,0 +1,4 @@
+package pt.appinionsdk.appinion.android.appinionsdk.authorization
+
+
+internal const val PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv9ArQ+SP3vIY9lABbQ6nqOt/cfIgvWLp8U8DqljN6h8yYo2JMk6LZRtI5HbVm/Z6UbH6wEIbaP1PwwvOg23DR8SojRPzYA00miQ3v6zpaoy0XwladUMfqN8flFliW0O/X32zsPpZCLTFRH/39g81Pg5/02V0q2i5oUdVCM/sPnC7/Gdk17Wlmc8T8rX2sIsQ8zrUykkU8hyZIIz8elsGiVSCQvdRlZCHMK+9PzN54KrTUpMQ4c0SPTfAQqnI1/U0/kceEEdSUX9l7KaC4SAvUx/uK84lm3PPluqUI97rEMhy1kh5v1eqbcpcGDhT73vkhZSvZFRtiNYGozipF5DkrwIDAQAB-----END PUBLIC KEY-----"
