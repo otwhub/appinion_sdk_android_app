@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppinionApp"
 include(":app")
-include(":Appinion-sdk")
+include(":appinion_sdk")
