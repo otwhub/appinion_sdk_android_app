@@ -8,7 +8,7 @@ enum class ENV{
     DEV
 }
 
-private val _ENV = ENV.DEV
+private val _ENV = ENV.PROD
 enum class Scheme(val value: String) {
     SAFE("https"),
     NOT_SAFE("http")
