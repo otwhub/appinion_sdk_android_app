@@ -39,6 +39,7 @@ import pt.appinionsdk.appinion.android.connect.model.Feedback
 import pt.appinionsdk.appinion.android.ui.ui.beanselector.BeanItem
 import pt.appinionsdk.appinion.android.ui.ui.beanselector.BeanSelector
 import pt.appinionsdk.appinion.android.ui.ui.feedBackContainer.FeedBackContainer
+import pt.appinionsdk.appinion.android.ui.ui.itens_selector.ItensSelector
 import pt.appinionsdk.appinion.android.ui.ui.theme.White
 import pt.appinionsdk.appinion.android.utils.getDeviceInfo
 
@@ -47,6 +48,7 @@ import pt.appinionsdk.appinion.android.utils.getDeviceInfo
 fun StoreFeedbackMoreView(
     id: String,
     secondMessage: String,
+    questionType: Int,
     questions: List<String>,
     onClickSend: () -> Unit,
     onClickNotNow: () -> Unit,
@@ -85,17 +87,32 @@ fun StoreFeedbackMoreView(
             Spacer(Modifier.height(16.dp))
 
             Box(modifier = Modifier.fillMaxWidth()) {
-                BeanSelector(
-                    items = beans,
-                    selectedItems = selectedIds,
-                    onSelectionChanged = { id ->
-                        selectedIds = if (selectedIds.contains(id)) {
-                            selectedIds - id
-                        } else {
-                            selectedIds + id
+                if (questionType == 1) {
+                    ItensSelector(
+                        items = beans,
+                        selectedItems = selectedIds,
+                        onSelectionChanged = { id ->
+                            selectedIds = if (selectedIds.contains(id)) {
+                                selectedIds - id
+                            } else {
+                                selectedIds + id
+                            }
+
                         }
-                    }
-                )
+                    )
+                }else{
+                    BeanSelector(
+                        items = beans,
+                        selectedItems = selectedIds,
+                        onSelectionChanged = { id ->
+                            selectedIds = if (selectedIds.contains(id)) {
+                                selectedIds - id
+                            } else {
+                                selectedIds + id
+                            }
+                        }
+                    )
+                }
             }
             Spacer(Modifier.height(16.dp))
             Box(

@@ -31,17 +31,17 @@ fun StoreFeedbackConclusionView(
 ) {
     FeedBackContainer(
         content = {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(60.dp),
-                horizontalArrangement = Arrangement.Center
-            ) {
-                Image(
-                    painter = painterResource(id = LocalSdkImages.current.sdkFirstImage),
-                    contentDescription = null
-                )
-            }
+//            Row(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .height(60.dp),
+//                horizontalArrangement = Arrangement.Center
+//            ) {
+//                Image(
+//                    painter = painterResource(id = LocalSdkImages.current.sdkFirstImage),
+//                    contentDescription = null
+//                )
+//            }
             Spacer(modifier = Modifier.height(24.dp))
             Text(modifier = Modifier.fillMaxWidth().wrapContentHeight(),
                 text = finalMessage,

@@ -130,6 +130,7 @@ fun SdkNavigation(stageConfiguration: StageConfiguration, activity: Activity) {
             StoreFeedbackMoreView(
                 id = stageConfiguration.id,
                 secondMessage = stageConfiguration.secondMessage ?: "",
+                questionType = stageConfiguration.questiontype ?: 1,
                 questions = stageConfiguration.questions ?: emptyList(),
                 onClickSend = {
                     navController.navigate(Steps.CONCLUDED.step)
@@ -147,7 +148,7 @@ fun SdkNavigation(stageConfiguration: StageConfiguration, activity: Activity) {
 
         composable(Steps.CONCLUDED.step) {
             StoreFeedbackConclusionView(
-                finalMessage = "Thank you for your feedback" ?: "",
+                finalMessage = stageConfiguration.finalMessage ?: "",
                 finishFlow = {
                     val activity = context as? Activity
                     activity?.finish()

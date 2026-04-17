@@ -70,16 +70,6 @@ fun StoreFeedbackAskView(
                 color = MaterialTheme.colorScheme.onPrimary
             )
 
-//            Spacer(Modifier.height(24.dp))
-//
-//            Text(
-//                text = "How do you feel about\nthe App?",
-//                textAlign = TextAlign.Center,
-//                style = MaterialTheme.typography.titleMedium,
-//                fontWeight = FontWeight.Bold,
-//                color = MaterialTheme.colorScheme.onPrimary
-//            )
-
             Spacer(Modifier.height(32.dp))
 
             Row(
