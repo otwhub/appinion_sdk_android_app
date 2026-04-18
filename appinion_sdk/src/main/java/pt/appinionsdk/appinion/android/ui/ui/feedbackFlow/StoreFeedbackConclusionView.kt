@@ -31,6 +31,7 @@ fun StoreFeedbackConclusionView(
 ) {
     FeedBackContainer(
         content = {
+            //TODO: Meter o resource
 //            Row(
 //                modifier = Modifier
 //                    .fillMaxWidth()
@@ -58,6 +59,7 @@ fun StoreFeedbackConclusionView(
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                 onClick = finishFlow
             ) {
+                //TODO: Resource
                 Text(color = MaterialTheme.colorScheme.onSecondary, text = "Close")
             }
         }

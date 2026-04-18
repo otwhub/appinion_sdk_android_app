@@ -32,10 +32,10 @@ import pt.appinionsdk.appinion.android.ui.ui.theme.getAppIcon
 @Composable
 fun StoreFeedbackAskView(
     firstMessage: String,
-    type:String,
+    type: String,
     like: () -> Unit,
     notLike: () -> Unit,
-    closeClick: () -> Unit
+    closeClick: () -> Unit,
 ) {
     var selectedRating by remember { mutableStateOf(0) }
     val context = LocalContext.current
@@ -59,40 +59,53 @@ fun StoreFeedbackAskView(
                     )
                 }
             }
-            Spacer(Modifier.height(24.dp))
-
+            Spacer(Modifier.height(32.dp))
             Text(
-                modifier = Modifier.fillMaxWidth().wrapContentHeight(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
                 text = firstMessage,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Light,
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onPrimary
             )
-
+            Spacer(Modifier.height(48.dp))
+            // TODO: Introduzir novo texto vindo da app
+            Text(
+                modifier = Modifier
+                    .wrapContentHeight(),
+                text = "Está a gostar da\nnossa aplicação?",
+                fontWeight = FontWeight.SemiBold,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onPrimary
+            )
             Spacer(Modifier.height(32.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceAround
+                horizontalArrangement = Arrangement.Center
             ) {
-                if (type.lowercase() == "rating"){
+                if (type.lowercase() == "rating") {
+                    //TODO: Resources as imagens e cores (strings no config)
                     AppinionRatingBar(
                         rating = selectedRating,
                         onRatingChange = {
                             selectedRating = it
-                            if (it > 3){
+                            if (it > 3) {
                                 like()
-                            }else {
+                            } else {
                                 notLike()
                             }
                         }
                     )
-                }else {
+                } else {
                     IconButton(
                         modifier = Modifier.size(54.dp),
                         onClick = like
                     ) { Text(text = "\uD83D\uDC4D", fontSize = 40.sp) }
+                    Spacer(Modifier.size(54.dp))
                     IconButton(modifier = Modifier.size(54.dp), onClick = notLike) {
                         Text(
                             text = "👎",

@@ -1,5 +1,6 @@
 package pt.appinionsdk.appinion.android.ui.ui.itens_selector
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -16,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import pt.appinionsdk.appinion.android.ui.ui.beanselector.BeanItem
-
+import java.nio.file.WatchEvent
 
 
 @Composable
@@ -48,17 +49,21 @@ private fun ItemRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .wrapContentHeight()
+            .background(color = Color.Red)
             .clickable { onCheckedChange() }
-            .padding(vertical = 12.dp, horizontal = 8.dp),
+            .padding(vertical = 8.dp, horizontal = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
+        //TODO: Quadrado maior
         Text(
-            modifier = Modifier.weight(1F),
+            modifier = Modifier,
             text = item.label,
-            style = MaterialTheme.typography.bodyLarge
+            style = MaterialTheme.typography.bodyMedium
         )
         Checkbox(
+            modifier = Modifier.size(36.dp),
             checked = isSelected,
             colors = CheckboxDefaults.colors(checkmarkColor = Color.White),
             onCheckedChange = { onCheckedChange() }

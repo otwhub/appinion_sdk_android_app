@@ -77,8 +77,8 @@ fun StoreFeedbackMoreView(
                 Text(
                     text = secondMessage,
                     modifier = Modifier.fillMaxWidth().wrapContentHeight(),
+                    fontWeight = FontWeight.Light,
                     textAlign = TextAlign.Center,
-                    fontWeight = FontWeight.SemiBold,
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onPrimary
                 )
@@ -124,7 +124,7 @@ fun StoreFeedbackMoreView(
                 val focusManager = LocalFocusManager.current
 
                 Column(modifier = Modifier.padding(vertical = 8.dp)) {
-
+//TODO: Resource
                     Text(
                         "Please, let us know more:",
                         fontWeight = FontWeight.Normal,

@@ -31,7 +31,7 @@ fun BeanSelector(
     selectedItems: Set<Int>,
     onSelectionChanged: (Int) -> Unit
 ) {
-    // FlowRow organiza os beans e muda de linha automaticamente
+    //TODO: Juntar mais os chips, verificar cor
     FlowRow(
         modifier = Modifier.padding(8.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),

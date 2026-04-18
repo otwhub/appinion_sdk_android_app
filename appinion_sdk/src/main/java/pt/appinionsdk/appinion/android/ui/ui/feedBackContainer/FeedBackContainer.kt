@@ -47,7 +47,7 @@ fun FeedBackContainer(content: @Composable ()-> Unit, onClick: ()-> Unit){
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 content()
-                Spacer(Modifier.height(32.dp))
+                Spacer(Modifier.height(48.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
                     Text(
                         text = "Powered by Appinion",
